@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "name": "<(PKGNAME)",
+  "version": "1.0.0-a.1",
+  "author": "<(AUTHOR)",
+  "license": "MIT",
+  "description": "",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/<(AUTHOR)/<(PKGNAME)"
+  },
+  "files": [
+    "<(BUILDDIR)"
+  ],
+  "types": "<(BUILDDIR)/index.d.ts",
+  "main": "<(BUILDDIR)/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "build:dev": "tsc --module commonjs --inlineSourceMap",
+    "build:prod": "npm run lint && rollup -c",
+    "clean": "rm -rf <(BUILDDIR)",
+    "prepare": "npm run clean && npm run build:prod",
+    "postpublish": "npm run clean"
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "include": ["src/**/*.ts"],
+    "compilerOptions": {
+        "outDir": "<(BUILDDIR)",
+        "target": "es2022",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "lib": ["es2022", "dom"],
+        "strict": true,
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "downlevelIteration": true
+    }
+}
