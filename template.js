@@ -52,5 +52,5 @@ export default {
     onScaffolded: async dir => {
         await execaCommand(`npm i -D ${DEV_DEPS}`, {cwd: dir, stderr: 'inherit'})
     },
-    sharedDirectories: ['shared']
+    sharedDirectories: ['share']
 }
