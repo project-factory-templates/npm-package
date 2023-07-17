@@ -20,14 +20,14 @@
     ".": {
       "types": "./<(BUILDDIR)/index.d.ts",
       "import": "./<(BUILDDIR)/index.js"
-    },
+    },<(PACKAGE_JSON_EXPORTS)
     "./package.json": "./package.json"
   },
   "scripts": {
     "lint": "eslint .",
     "build:dev": "tsc --inlineSourceMap",
     "build:prod": "npm run lint && rollup -c",
-    "clean": "rm -rf <(BUILDDIR)",
+    "clean": "rm -rf <(BUILDDIR)<(PACKAGE_JSON_CLEANDIRS)",
     "prepare": "npm run clean && npm run build:prod",
     "postpublish": "npm run clean"
   }

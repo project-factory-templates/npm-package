@@ -1,0 +1,7 @@
+{
+  "name": "<(PKGNAME)/<(NSPATH)",
+  "types": "<(ROOT)/<(BUILDDIR)/<(NSPATH).d.ts",
+  "module": "<(ROOT)/<(BUILDDIR)/<(NSPATH).mjs",
+  "main": "<(ROOT)/<(BUILDDIR)/<(NSPATH).cjs",
+  "sideEffects": false
+}

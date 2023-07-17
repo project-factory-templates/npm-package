@@ -19,7 +19,7 @@
     "lint": "eslint .",
     "build:dev": "tsc --module commonjs --inlineSourceMap",
     "build:prod": "npm run lint && rollup -c",
-    "clean": "rm -rf <(BUILDDIR)",
+    "clean": "rm -rf <(BUILDDIR)<(PACKAGE_JSON_CLEANDIRS)",
     "prepare": "npm run clean && npm run build:prod",
     "postpublish": "npm run clean"
   }

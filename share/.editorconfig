@@ -12,5 +12,5 @@ trim_trailing_whitespace = true
 [LICENSE.txt]
 insert_final_newline = false
 
-[package.json]
+[package.json*]
 indent_size = 2

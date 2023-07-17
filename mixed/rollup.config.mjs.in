@@ -1,9 +1,9 @@
 import typescript from '@rollup/plugin-typescript'
 import terser from '@rollup/plugin-terser'
 import dts from 'rollup-plugin-dts'
-import * as path from 'node:path'
+import * as path from 'node:path'<(ROLLUP_CONFIG_JS_NSSUPPORT_IMPORTS)
 
-const EXTERNAL = []
+const EXTERNAL = []<(ROLLUP_CONFIG_JS_NSSUPPORT_VARS)
 
 function createEntryFileNames(extension) {
     extension ??= '.js'
@@ -34,10 +34,10 @@ function createInput(paths) {
 function applyDefaultConfig(config) {
     return {
         ...config,
-        input: createInput(['']),
+        input: createInput([<(ROLLUP_CONFIG_JS_CREATE_INPUT_ARG)]),
         external: EXTERNAL
     }
-}
+}<(ROLLUP_CONFIG_JS_NSSUPPORT_CODE)
 
 /** @type {import('rollup').RollupOptions[]} */
 const config = [
