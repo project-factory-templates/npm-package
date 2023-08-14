@@ -31,11 +31,11 @@ export default {
             initial: 'build'
         }
     ],
-    onResolving: async (vars, tag) => {
+    onResolving: async vars => {
         vars.YEAR = new Date().getFullYear()
         vars.AUTHOR = (await $`npm profile get name`).stdout
     },
-    onScaffolded: async (dir, vars) => {
+    onScaffolded: async dir => {
         await execaCommand(`npm i -D ${DEV_DEPS}`, {cwd: dir, stderr: 'inherit'})
     }
 }
