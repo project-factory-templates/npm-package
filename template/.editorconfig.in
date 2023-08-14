@@ -14,3 +14,12 @@ insert_final_newline = false
 
 [package.json*]
 indent_size = 2
+
+[<(BUILDDIR)/**]
+charset = unset
+end_of_line = unset
+indent_size = unset
+indent_style = unset
+insert_final_newline = unset
+tab_width = unset
+trim_trailing_whitespace = unset

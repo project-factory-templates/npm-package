@@ -5,7 +5,7 @@
         "project": "./tsconfig.json"
     },
     "plugins": ["@typescript-eslint", "deprecation"],
-    "ignorePatterns": ["<(BUILDDIR)", <(ESLINTRC_IGNORE)],
+    "ignorePatterns": ["<(BUILDDIR)", "**.js"],
     "rules": {
         "indent": ["error", 4],
         "linebreak-style": ["error", "unix"],

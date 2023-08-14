@@ -10,16 +10,12 @@
     "type": "git",
     "url": "https://github.com/<(AUTHOR)/<(PKGNAME)"
   },
-  "files": [
-    "<(BUILDDIR)"
-  ],
-  "types": "<(BUILDDIR)/index.d.ts",
-  "main": "<(BUILDDIR)/index.js",
+  "type": "module",
   "scripts": {
-    "lint": "eslint .",
-    "build:dev": "tsc --module commonjs --inlineSourceMap",
+    "lint": "eslint . --max-warnings 0",
+    "build:dev": "tsc --inlineSourceMap",
     "build:prod": "npm run lint && rollup -c",
-    "clean": "rm -rf <(BUILDDIR)<(PACKAGE_JSON_CLEANDIRS)",
+    "clean": "rm -rf <(BUILDDIR)",
     "prepare": "npm run clean && npm run build:prod",
     "postpublish": "npm run clean"
   }
